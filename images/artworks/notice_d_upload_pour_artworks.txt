@@ -1,0 +1,9 @@
+SI CES INSTRUCTIONS NE SONT PAS RESPECTEES IL Y AURA DES BUGS !
+
+La page des artworks est auto générée par PHP et répond à une logique : 
+
+Chaque image différentes doit être mit dans un dossier portant un nom simple sans espace. Les différentes version/taille de cette image doivent se trouver à la racine de ce dossier. La miniature doit être placée dans un nouveau dossier appelé : mini. (regardez les exemples existant si vous ne comprenez pas).
+
+Il est prévu des espaces pour les 3 catégories d'images... Si vous voulez en rajouter une, va falloir aller bouffer un peu de code. 
+
+Bonne chance à toi qui lit ces lignes. 

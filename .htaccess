@@ -1,0 +1,13 @@
+Redirect permanent /V2 /v2.php?
+Redirect permanent /mobile /v2.php?
+Redirect permanent /luxuria.php /client-irc-kvirc-luxuria.php
+Redirect permanent /download/ /v2.php?
+
+RewriteEngine on
+RewriteBase /
+RewriteCond %{THE_REQUEST} /lireNews\.php\?idnews=([0-9]+)&titre=([^\s]+) [NC]
+RewriteRule . news-%1-%2.html? [R=301,L]
+RewriteRule ^news-([0-9]+)-(.+)\.html$ lireNews.php?idnews=$1&titre=$2 [L]
+RewriteCond %{THE_REQUEST} /ficheprojet\.php\?idProjet=([0-9]+)&titre=([^\s]+) [NC]
+RewriteRule . projet-%1-%2.html? [R=301,L]
+RewriteRule ^projet-([0-9]+)-(.+)\.html$ ficheprojet.php?idProjet=$1&titre=$2 [L]

@@ -1,0 +1,6 @@
+AuthName message
+AuthUserFile  /path/to/your/hhh-world/installation/admin/.htpasswd
+AuthGroupFile /dev/null
+AuthType Basic
+require valid-user
+

@@ -1,0 +1,1 @@
+<?php header('Location: /w00tw00t-redirection-de-xmlrpc.php-pour-ban'); ?>

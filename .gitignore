@@ -1,0 +1,14 @@
+/include/connexionBdd.php
+/include/connexionTwitter.php
+/admin/.htpasswd
+/sitemap.xml
+
+# tout ce qui est relaté aux news
+/freedownload/*
+/*.mp3
+/images/**.png
+/images/**.jpg
+
+# LeL
+/lel/volumes/*
+/lel/.ftpconfig
