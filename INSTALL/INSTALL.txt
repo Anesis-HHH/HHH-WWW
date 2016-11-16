@@ -1,17 +1,15 @@
-1a) renommer include/connexionBdd-example.php en connexionBdd.php
+ï»¿1a) renommer include/connexionBdd-example.php en connexionBdd.php
 1b) le remplir avec vos propres infos MySQL/MariaDB
 
 2a) renommer include/connexionTwitter-example.php en connexionTwitter.php
-2b) le remplir avec vos token twitter (il faut préalablement créer votre appli twitter via https://dev.twitter.com/apps pour avoir vos clés)
+2b) le remplir avec vos token twitter (il faut prÃ©alablement crÃ©er votre appli twitter via https://dev.twitter.com/apps pour avoir vos clÃ©s)
 
 3) importer dans votre base SQL le fichier INSTALL/hhhV3.sql
 
 4a) changer l'adresse de AuthUserFile dans admin/.htaccess
-4b) créer votre .htpasswd avec vos utilisateurs/mots de passe
+4b) crÃ©er votre .htpasswd avec vos utilisateurs/mots de passe
 
-Normalement*, ça devrais fonctionner.
-
-
+Normalement*, Ã§a devrais fonctionner.
 
 
 
@@ -19,4 +17,6 @@ Normalement*, ça devrais fonctionner.
 
 
 
-*D'un autre coté, qu'est-ce que la normalité?
+
+
+*D'un autre cotÃ©, qu'est-ce que la normalitÃ©?
