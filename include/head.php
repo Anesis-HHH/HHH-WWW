@@ -27,10 +27,6 @@
 		<link rel="shortcut icon" href="favicon.ico">
 		<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
 		<link rel="stylesheet" href="design/css.css?=refreshtwitter">
-		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
-		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-		<!--<script src="design/js/jquery-1.11.0.js"></script>-->
 		<script src="design/js/jquery.mousewheel.js"></script>
 		<script src="design/js/perfect-scrollbar.js"></script>
 		<script src="design/js/jquery.transit.min.js"></script>
@@ -58,6 +54,12 @@
 		
 		</div>
 		
+<?php /* dépendre de google, caymal
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <script src="design/js/jquery-1.11.0.js"></script>
+*/ ?>
+    <script src="design/js/jquery-1.11.0.min.js"></script>
 <?php
 // on va aller se chercher le nombre de projet en fonction de sa catégorie dans le site :)
 include 'countprojet.php';
