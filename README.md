@@ -1,8 +1,8 @@
 ﻿HHH-WWW
 ===
+[![LICENSE](https://img.shields.io/badge/license-CC0-blue.svg)](LICENSE)
 
 **[Site web de la HHH (NSFW)](https://hhh-world.com/)**
-[![LICENSE](https://img./badge/license-CC0-blue.svg)](LICENSE)
 
 Documentation
 ===
