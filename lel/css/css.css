@@ -69,12 +69,10 @@ nav {
     height: 40px;
     transition: all 0.2s;
     color: #fff;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(50, 0, 0, 0.85);
 	overflow:hidden;
 }
-nav:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
+
 nav.deployed {
     position: fixed;
     width: 250px;
@@ -84,7 +82,6 @@ nav.deployed {
 nav:hover.deployed {
     width: 250px;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.3);
 }
 #menu {
     width: 100%;
