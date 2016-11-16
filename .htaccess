@@ -11,3 +11,19 @@ RewriteRule ^news-([0-9]+)-(.+)\.html$ lireNews.php?idnews=$1&titre=$2 [L]
 RewriteCond %{THE_REQUEST} /ficheprojet\.php\?idProjet=([0-9]+)&titre=([^\s]+) [NC]
 RewriteRule . projet-%1-%2.html? [R=301,L]
 RewriteRule ^projet-([0-9]+)-(.+)\.html$ ficheprojet.php?idProjet=$1&titre=$2 [L]
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-FRAME-OPTIONS "SAMEORIGIN"
+Header always set X-XSS-Protection "1; mode=block"
+Header always set X-Content-Type-Options "nosniff"
+</IfModule>

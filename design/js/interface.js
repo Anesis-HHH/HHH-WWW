@@ -17,7 +17,6 @@ Free to use and fork and anything you want !
 |############################################################|
 |###########_____SITE V3 - POLE DEVELOPPEMENT_____###########|
 
-
 **/
 $(document).ready( function () {
 
@@ -226,7 +225,7 @@ $("#triggercontact").click(function(){
 		var parent=$(this).parents(".contactbox").attr("id");
 		sendcontact(parent);
 	});
-	$("#contactpopup span").click(function(){
+	$("#contactpopup").find("span").click(function(){
 		$("#contactpopup").remove();
 	});
 });
@@ -281,7 +280,7 @@ function sendcontact(parent){
 			$("#formsubcont").css({"top":hauteur/2-50,"left":largeur/2-50});
 
 			//fermeture du popup
-			$("#formsubcont span").click(function(){
+			$("#formsubcont").find("span").click(function(){
 				$("#formsubcont").remove();
 				$("#contactpopup").remove();
 			});
@@ -346,7 +345,7 @@ function errorbox(){
 					$("#formsubcont").css({"top":hauteur/2-50,"left":largeur/2-50});
 
 					//fermeture du popup
-					$("#formsubcont span").click(function(){
+					$("#formsubcont").find("span").click(function(){
 						$("#formsubcont").remove();
 					});
 					
@@ -404,8 +403,8 @@ function getcommnews(news) {
 			// prévisualiser un commentaire
 			$("#preview_commentaire_button").click(function(){
 				$("#commpreview, #commpreviewp").remove();
-				var pseudo=$("#depot_commentaire_depotbox input[name='pseudo']").val();
-				var commentaire=nl2br($("#depot_commentaire_depotbox textarea[name='commentaire']").val());
+				var pseudo=$("#depot_commentaire_depotbox").find("input[name='pseudo']").val();
+				var commentaire=nl2br($("#depot_commentaire_depotbox").find("textarea[name='commentaire']").val());
 				if(pseudo.trim()==="" || commentaire.trim()===""){
 					alert("Il n'y a rien à prévisualiser banane, il faut remplir tous les champs.");
 					return;
@@ -418,9 +417,9 @@ function getcommnews(news) {
 			$("#depot_commentaire_button").click(function(){
 				// on envoi un nouveau commentaire
 				var idnews=$(this).attr("data-commnewsid");
-				var pseudo=$("#depot_commentaire_depotbox input[name='pseudo']").val();
-				var commentaire=$("#depot_commentaire_depotbox textarea[name='commentaire']").val();
-				var dumbot=$("#depot_commentaire_depotbox input[name='dumbot']").val();
+				var pseudo=$("#depot_commentaire_depotbox").find("input[name='pseudo']").val();
+				var commentaire=$("#depot_commentaire_depotbox").find("textarea[name='commentaire']").val();
+				var dumbot=$("#depot_commentaire_depotbox").find("input[name='dumbot']").val();
 				postcommnews(idnews,pseudo,commentaire,dumbot);
 		
 			});
@@ -463,7 +462,7 @@ function postcommnews(news,pseudo,commentaire,dumbot){
 			$("#formsubcont").css({"top":hauteur/2-50,"left":largeur/2-50});
 
 			//fermeture du popup
-			$("#formsubcont span").click(function(){
+			$("#formsubcont").find("span").click(function(){
 				$("#formsubcont").remove();
 				$("#commentaire_box").remove();
 			});
@@ -508,8 +507,8 @@ function getcommprojet(projet) {
 			// prévisualiser un commentaire
 			$("#preview_commentaire_button").click(function(){
 				$("#commpreview, #commpreviewp").remove();
-				var pseudo=$("#depot_commentaire_depotbox input[name='pseudo']").val();
-				var commentaire=$("#depot_commentaire_depotbox textarea[name='commentaire']").val();
+				var pseudo=$("#depot_commentaire_depotbox").find("input[name='pseudo']").val();
+				var commentaire=$("#depot_commentaire_depotbox").find("textarea[name='commentaire']").val();
 				if(pseudo.trim()==="" || commentaire.trim()===""){
 					alert("Il n'y a rien a prévisualiser banane.");
 					return;
@@ -522,9 +521,9 @@ function getcommprojet(projet) {
 			$("#depot_commentaire_button").click(function(){
 				// on envoi un nouveau commentaire
 				var idprojet=$(this).attr("data-commprojetid");
-				var pseudo=$("#depot_commentaire_depotbox input[name='pseudo']").val();
-				var commentaire=$("#depot_commentaire_depotbox textarea[name='commentaire']").val();
-				var dumbot=$("#depot_commentaire_depotbox input[name='dumbot']").val();
+				var pseudo=$("#depot_commentaire_depotbox").find("input[name='pseudo']").val();
+				var commentaire=$("#depot_commentaire_depotbox").find("textarea[name='commentaire']").val();
+				var dumbot=$("#depot_commentaire_depotbox").find("input[name='dumbot']").val();
 				postcommprojet(idprojet,pseudo,commentaire,dumbot);
 		
 			});
@@ -568,7 +567,7 @@ function postcommprojet(projet,pseudo,commentaire,dumbot){
 			$("#formsubcont").css({"top":hauteur/2-50,"left":largeur/2-50});
 
 			//fermeture du popup
-			$("#formsubcont span").click(function(){
+			$("#formsubcont").find("span").click(function(){
 				$("#formsubcont").remove();
 				$("#commentaire_box").remove();
 			});
@@ -604,10 +603,10 @@ function notebloc(){
 	dimensions();
 	getsize("#notebox");
 	$("#notebox").css({"top":100,"left":largeur/2-itemOW/2});
-	$("#notebox span").click(function(){
+	$("#notebox").find("span").click(function(){
 		$("#notebox").remove();
 	});
-	$("#advice div").click(function(){
+	$("#advice").find("div").click(function(){
 		$("#advice").height("auto");
 	});
 	$(".blocknotation").click(function(){
@@ -620,7 +619,7 @@ function notebloc(){
 	// on envoi la note
 	$("#sendnote").click(function(){
 		var idprojet=$("#projetcommentaire").attr("data-idprojet");
-		var note=$(".blocknotation div[data-select=select]").attr("data-note");
+		var note=$(".blocknotation").find("div[data-select=select]").attr("data-note");
 		if(localStorage["note"+idprojet]){
 			alert("Merci à vous d'apprécier autant notre travail mais vous avez déjà noté ce projet.");
 		}
@@ -647,7 +646,7 @@ function notebloc(){
 				$("#formsubcont").css({"left":$("#notebox").width()/2-90});
 
 				//fermeture du popup
-				$("#formsubcont span").click(function(){
+				$("#formsubcont").find("span").click(function(){
 					$("#formsubcont").remove();
 					$("#notebox").remove();
 					
@@ -691,7 +690,7 @@ function hhhchatcontrol(){
 	
 	
 	// boutons de controle réduire/agrandir
-	$("#chatheader span:eq(1)").click(function(){
+	$("#chatheader").find("span:eq(1)").click(function(){
 		
 		if($(this).hasClass("reploy")){
 			$(this).removeAttr("class");
@@ -703,7 +702,7 @@ function hhhchatcontrol(){
 		}
 	});
 	// boutons de controle fermer
-	$("#chatheader span:eq(0)").click(function(){
+	$("#chatheader").find("span:eq(0)").click(function(){
 		$("#hhhtchat").remove();
 	});
 	
@@ -715,7 +714,7 @@ function chatposition(){
 	var h= (hauteur/3)*2;
 	$("#hhhtchat").attr("data-chatdeploy","true");
 	$("#hhhtchat").css({"width":w,"height":h+50,"left":largeur/2-w/2, "top":hauteur/2-(h+50)/2});
-	$("#hhhtchat iframe").css({"width":w,"height":h-50});
+	$("#hhhtchat").find("iframe").css({"width":w,"height":h-50});
 }
 
 function chatopen(){
@@ -1072,104 +1071,109 @@ $(document).mousedown(function(e){
 		var lien = $(this).attr("href");
 		// on trie les liens au cas par cas
 		
-			//liens pour des pages internes sans autres GET
-		if($(this).is($("a[data-link=internal]"))){
-			titrepage=$('nav a[href="'+lien+'"]').text()
-			request="?request=ajax";
-		}
-			// liens de projet
-		else if($(this).is($("a[data-link=projet]"))){
-			titrepage=lienprojet;
-			request="&request=ajax";
-			// alert();
-			// console.log(titrepage);
-		}
-			// liens d'un projet depuis une news
-		else if($(this).is($("a[data-link=liennewsprojet]"))){
-			titrepage=$(this).text();
-			request="&request=ajax";
-		}
-			// liens de liste projet
-		else if($(this).is($("a[data-link=listeprojet]"))){
-			titrepage=$(".listrlz_titre",this).text();
-			request="&request=ajax";
+		if(lien=="https://lel.hhh-world.com"){
+			window.open(lien);
+		}else{
+				
+				//liens pour des pages internes sans autres GET
+			if($(this).is($("a[data-link=internal]"))){
+				titrepage=$('nav a[href="'+lien+'"]').text()
+				request="?request=ajax";
+			}
+				// liens de projet
+			else if($(this).is($("a[data-link=projet]"))){
+				titrepage=lienprojet;
+				request="&request=ajax";
+				// alert();
+				// console.log(titrepage);
+			}
+				// liens d'un projet depuis une news
+			else if($(this).is($("a[data-link=liennewsprojet]"))){
+				titrepage=$(this).text();
+				request="&request=ajax";
+			}
+				// liens de liste projet
+			else if($(this).is($("a[data-link=listeprojet]"))){
+				titrepage=$(".listrlz_titre",this).text();
+				request="&request=ajax";
 
-			
-		}
-			// news seule depuis l'index
-		else if($(this).is($("a[data-link=news]"))){
- 
-			titrepage=$(this).parents("article").children("h3").text();
-			request="&request=ajax";
-		}
-			// news seule depuis les archives
-		else if($(this).is($("a[data-link=archnews]"))){
-			titrepage=$(".listnews_titre",this).text();
-			request="&request=ajax";
-		}
-
-			// membre
-		else if($(this).is($("a[data-link=seemembre]"))){
-			titrepage="Les membres";
-			request="&request=ajax";
-			flag=$(this).attr("href");
-			// flag="askmembre";
-		}
-
-			// liens du menu
-		else {
-			titrepage = $(this).text();
-			request="?request=ajax";
-		}
-		loader("init");
-		$.ajax({
-			url: lien + request,
-			success: function(data){
-				loader("destroy");
-				$("#content").animate({scrollTop:0});
-				reploymenu();
-				$("h2").text(titrepage);
-				$("#dynabox").html(data);
-				
-				// lancement des différents modules
-				affichage();
-				seecommnews();
-				seecommprojet();
-				visionneuse();
-				boitafiltre();
-				projet();
-				thanx();
-				contact();
-				givenote();
-				seemembres();
-				chatopen();
-				errorbox();
-				deploynews();
-				
-				// quand on a fait un lien depuis un membre
-				
-				if (typeof (flag) != 'undefined'){
-					flag=flag.substr(23);
-					// les-membres.php?member=Lukia
-					$.ajax({
-						url: "classmembres.php?pseudo="+flag+"",
-						success: function(data){
-							$("#rightmembres").html(data);
-						}
-					})
-				}
-				
-				// on pousse la page vue dans le tableau Google Analytics
-				_gaq.push(['_trackPageview','/'+lien]);
-				// controle IE ( IE <=9 incompatible avec history.pushState)
-				if($.browser['msie']===false || $.browser['msie']===true && version>=10.0){
-					history.pushState('','Hardcore Hentai Heaquarter V3 - '+titrepage, lien); 
-				}
-				document.title = 'Hardcore Hentai Heaquarter V3 - '+titrepage;
-				
 				
 			}
-		});
+				// news seule depuis l'index
+			else if($(this).is($("a[data-link=news]"))){
+	 
+				titrepage=$(this).parents("article").children("h3").text();
+				request="&request=ajax";
+			}
+				// news seule depuis les archives
+			else if($(this).is($("a[data-link=archnews]"))){
+				titrepage=$(".listnews_titre",this).text();
+				request="&request=ajax";
+			}
+
+				// membre
+			else if($(this).is($("a[data-link=seemembre]"))){
+				titrepage="Les membres";
+				request="&request=ajax";
+				flag=$(this).attr("href");
+				// flag="askmembre";
+			}
+
+				// liens du menu
+			else {
+				titrepage = $(this).text();
+				request="?request=ajax";
+			}
+			loader("init");
+			$.ajax({
+				url: lien + request,
+				success: function(data){
+					loader("destroy");
+					$("#content").animate({scrollTop:0});
+					reploymenu();
+					$("h2").text(titrepage);
+					$("#dynabox").html(data);
+					
+					// lancement des différents modules
+					affichage();
+					seecommnews();
+					seecommprojet();
+					visionneuse();
+					boitafiltre();
+					projet();
+					thanx();
+					contact();
+					givenote();
+					seemembres();
+					chatopen();
+					errorbox();
+					deploynews();
+					
+					// quand on a fait un lien depuis un membre
+					
+					if (typeof (flag) != 'undefined'){
+						flag=flag.substr(23);
+						// les-membres.php?member=Lukia
+						$.ajax({
+							url: "classmembres.php?pseudo="+flag+"",
+							success: function(data){
+								$("#rightmembres").html(data);
+							}
+						})
+					}
+					
+					// on pousse la page vue dans le tableau Google Analytics
+					_gaq.push(['_trackPageview','/'+lien]);
+					// controle IE ( IE <=9 incompatible avec history.pushState)
+					if($.browser['msie']===false || $.browser['msie']===true && version>=10.0){
+						history.pushState('','Hardcore Hentai Heaquarter V3 - '+titrepage, lien); 
+					}
+					document.title = 'Hardcore Hentai Heaquarter V3 - '+titrepage;
+					
+					
+				}
+			});
+		}
 		e.preventDefault();
 
 	});
