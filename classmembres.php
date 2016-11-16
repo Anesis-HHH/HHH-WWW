@@ -1,6 +1,5 @@
 ﻿<?php
 include 'include/connexionBdd.php';
-
 if(isset($_GET["pseudo"]) && !empty($_GET["pseudo"])){
 	
 	$dossier = $bdd->prepare('SELECT * FROM membre WHERE pseudo = :pseu');
@@ -10,10 +9,11 @@ if(isset($_GET["pseudo"]) && !empty($_GET["pseudo"])){
 	while($fmembre = $dossier->fetch(PDO::FETCH_ASSOC))
 	{
 			// concaténation des poles
+			$poste="";
 			if($fmembre['pole1']!="-") $poste="Traduction, "; 
 			if($fmembre['pole2']!="-") $poste.="Correction, "; 
-			if($fmembre['pole3']!="-")$poste.="Édition, "; 
-			if($fmembre['pole4']!="-")$poste.="Développement, ";
+			if($fmembre['pole3']!="-") $poste.="Édition, "; 
+			if($fmembre['pole4']!="-") $poste.="Développement, ";
 			
 			$poste=substr($poste, 0, -2);
 			

@@ -10,7 +10,7 @@ echo $_POST['avatar']."<br/>";
 echo $_POST['contenu']."<br/>";
 echo $_POST['pseudo']."<br/>";
 echo $_POST['idMod']."<br/>";
-echo $_POST['best']."<br/>";
+if(isset($_POST['best'])) {echo $_POST['best']."<br/>";}
 
 if(isset($_POST['titre']) AND isset($_POST['avatar']) AND isset($_POST['contenu']) AND isset($_POST['pseudo']) AND isset($_POST['idMod']))
 {
