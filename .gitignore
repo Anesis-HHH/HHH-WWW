@@ -10,4 +10,5 @@
 /images/**.jpg
 
 # LeL
-/lel
+/lel/volumes/*
+/lel/.ftpconfig
