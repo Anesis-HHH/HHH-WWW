@@ -25,17 +25,17 @@
 						</a>
 						
 						<a href="http://neko-france.com" target="_blank">
-							<img src="design/img/partenaires/ban-neko.jpg" alt="Bannekomataya.jpg">
+							<img src="design/img/partenaires/ban-neko.jpg" alt="Nekomataya">
 							<div> Petite Team, mais grande qualité.</div>
 						</a>
 						
 						<a href="http://www.revedesexe.com/" target="_blank">
-							<img src="design/img/partenaires/revesex.jpg" alt="RevedeSexe.com">
+							<img src="design/img/partenaires/revesex.jpg" alt="RevedeSexe">
 							<div>Des histoires érotiques du plus simple au plus pervers !</div>
 						</a>
 						
 						<a href="http://listedescantrad.blogspot.fr/" target="_blank">
-							<img src="design/img/partenaires/lds.jpg" alt="listedescantrad.blogspot.com">
+							<img src="design/img/partenaires/lds.jpg" alt="listedescantrad">
 							<div>L'annuaire des teams de scantrad et fansub, tenu par la sympathique Nachry-chan.</div>
 						</a>
 					</div>
