@@ -765,7 +765,7 @@ class ProjetManager
 				<div class="imgcontrol">
 					<img src="<?php echo 'images/manga/couvertures/'.stripslashes($infos['couverture']); ?>" alt="<?php echo $infos['titre']; ?>">
 				</div>
-				<a class="projbutton" href="<?php echo 'https://lel.hhh-world.com/?r='.$infos['titre']; ?>" title="Lire le volume en ligne" target="_blank">Lire en ligne</a>
+				<a class="projbutton" href="<?php echo 'https://lel.anesis.tk/?r='.$infos['titre']; ?>" title="Lire le volume en ligne" target="_blank">Lire en ligne</a>
 				<div id="projetextrait" class="projbutton"><a href="<?php echo 'images/manga/extraits/'.$infos['extrait']; ?>" title="voir un extrait du volume" >Voir un extrait</a></div>
 				<div id="projetcommentaire" class="projbutton" data-idprojet="<?php echo $infos['id']; ?>">Commentaires (<?php echo $comm['nbCom'];?>)</div>
 							

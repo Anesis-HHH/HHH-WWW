@@ -15,7 +15,7 @@
 						
 						<p id="bulle" class="center"><span class="gras">Actuel</span><br/>0€</p>
 					
-						<a class="gras abloc center" href="http://anesis-server.infos.st/" target="_blank">Faire un don !</a>
+						<a class="gras abloc center" href="https://dons.anesis.tk/" target="_blank">Faire un don !</a>
 					</div>
 					<div id="partenaires" class="asidesection">
 						<h3 class="center">Partenaires</h3>

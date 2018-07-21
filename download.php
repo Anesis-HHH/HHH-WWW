@@ -9,7 +9,7 @@ if(isset($_SERVER['HTTP_REFERER']))
 }
 
 //On vérifie que le visiteur vient bien du site de la HHH
-if((preg_match('#hhh-world.com#', $visiteur)) OR (preg_match('# #', $visiteur)))
+if((preg_match('#anesis.tk#', $visiteur)) OR (preg_match('# #', $visiteur)))
 {
 	//Vérification de l'existance de la variable GET
 	if(isset($_GET['release']))
@@ -36,11 +36,11 @@ if((preg_match('#hhh-world.com#', $visiteur)) OR (preg_match('# #', $visiteur)))
 		}
 		$tele->closeCursor();
 		
-		header('Location: http://fichiers.hhh-world.com/'.$_GET['release']);
+		header('Location: http://fichiers.anesis.tk/'.$_GET['release']);
 	}
 }
 else//S'il ne vient pas du site web il ne peut pas télécharger et on le renvoie sur la page d'accueil
 {
-	header('Location: http:/hhh-world.com');
+	header('Location: http:/anesis.tk');
 }
 ?>

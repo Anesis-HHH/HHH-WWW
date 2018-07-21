@@ -1,7 +1,7 @@
 ﻿/** 
 All animations and features scripted by :
 Lukia
-contact@hhh-world.com
+contact@anesis.tk
 Free to use and fork and anything you want ! 
 
                          ___     ___
@@ -290,7 +290,7 @@ function sendcontact(parent){
 				$(this).val("");
 			});
 		}).fail(function() {
-			alert("ERREUR AJAX 02 : veuillez nous signaler l'erreur par mail : contact@hhh-world.com");
+			alert("ERREUR AJAX 02 : veuillez nous signaler l'erreur par mail : contact@anesis.tk");
 		});
 	}else {
 		alert("Vous n'avez pas remplit tous les champs obligatoires (*).");
@@ -355,7 +355,7 @@ function errorbox(){
 					});
 					$("input[name=errortype]:checked").attr("checked","");
 				}).fail(function() {
-					alert("ERREUR AJAX 06 : veuillez nous signaler l'erreur par mail : contact@hhh-world.com");
+					alert("ERREUR AJAX 06 : veuillez nous signaler l'erreur par mail : contact@anesis.tk");
 				});
 			}else {
 				alert("Tous les champs sont obligatoires.");
@@ -472,7 +472,7 @@ function postcommnews(news,pseudo,commentaire,dumbot){
 				$(this).val("");
 			});
 		}).fail(function() {
-			alert("ERREUR AJAX 01 : veuillez nous signaler l'erreur par mail : contact@hhh-world.com");
+			alert("ERREUR AJAX 01 : veuillez nous signaler l'erreur par mail : contact@anesis.tk");
 		});
 	}else {
 	alert("Tous les champs sont obligatoires.");
@@ -577,7 +577,7 @@ function postcommprojet(projet,pseudo,commentaire,dumbot){
 				$(this).val("");
 			});
 		}).fail(function() {
-			alert("ERREUR AJAX 04 : veuillez nous signaler l'erreur par mail : contact@hhh-world.com");
+			alert("ERREUR AJAX 04 : veuillez nous signaler l'erreur par mail : contact@anesis.tk");
 		});
 	}else {
 	alert("Tous les champs sont obligatoires.");
@@ -657,7 +657,7 @@ function notebloc(){
 					$("#note").text(finalnote)
 				});
 			}).fail(function() {
-				alert("ERREUR AJAX 03 : veuillez nous signaler l'erreur par mail : contact@hhh-world.com");
+				alert("ERREUR AJAX 03 : veuillez nous signaler l'erreur par mail : contact@anesis.tk");
 			});
 		}
 	});
@@ -1012,7 +1012,7 @@ function seemembres(){
 				// console.log(data);
 			}
 		}).fail(function() {
-			alert("ERREUR AJAX 05 : veuillez nous signaler l'erreur par mail : contact@hhh-world.com");
+			alert("ERREUR AJAX 05 : veuillez nous signaler l'erreur par mail : contact@anesis.tk");
 		});
 	});
 
@@ -1071,7 +1071,7 @@ $(document).mousedown(function(e){
 		var lien = $(this).attr("href");
 		// on trie les liens au cas par cas
 		
-		if(lien=="https://lel.hhh-world.com"){
+		if(lien=="https://lel.anesis.tk/"){
 			window.open(lien);
 		}else{
 				

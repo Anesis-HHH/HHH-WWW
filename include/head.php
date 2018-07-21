@@ -1,3 +1,7 @@
+<?php
+$urisite = 'https://anesis.tk';
+$urilel = 'https://lel.anesis.tk';
+?>
 <!DOCTYPE html> 
 <html lang="fr">
 <!--
@@ -26,8 +30,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta property="og:title" content="Hardcore Hentai Heaquarter" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://hhh-world.com/" />
-    <meta property="og:image:secure_url" content="https://hhh-world.com/hhh.png" />
+    <meta property="og:url" content="<?php echo $urisite;?>/" />
+    <meta property="og:image:secure_url" content="<?php echo $urisite;?>/hhh.png" />
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
     <link rel="stylesheet" href="design/css.css?=20161116">
@@ -41,7 +45,7 @@
     <script src="design/js/jquery.mousewheel.js"></script>
     <script src="design/js/perfect-scrollbar.js"></script>
     <script src="design/js/jquery.transit.min.js"></script>
-    <script src="design/js/interface.js?=20161116"></script>
+    <script src="design/js/interface.js?=20180506"></script>
     <script src="design/js/paper-full.min.js"></script>
     <noscript>Bienvenue en 2014, veuillez activer JavaScript pour naviguer sur notre site ;)</noscript>
     <!-- Load external PaperScript and associate it with myCanvas -->
@@ -88,7 +92,7 @@ include 'countprojet.php';
           <li>
             <a href="projets.php" title="Les projets de la team">Projets</a>
             <ul>
-              <li><a href="https://lel.hhh-world.com" title="Tous les projets à lire en ligne !">Lecture en Ligne</a></li>
+              <li><a href="<?php echo $urilel;?>" title="Tous les projets à lire en ligne !" target="_blank">Lecture en Ligne</a></li>
               <li><a href="projets-en-cours.php" title="Tous les mangas actuellement en cours de traduction">Projets en cours (<?php echo $catencours ?>)</a></li>
               <li><a href="projets-termines.php" title="Tous les mangas terminés">Projets terminés (<?php echo $catfini ?>)</a></li>
               <li><a href="liste-complete-des-releases.php" title="La liste complète de nos projets">Liste complète des releases</a></li>

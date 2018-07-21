@@ -18,7 +18,7 @@ include 'aside.php';
 				Firefox 5, Chrome 4, Safari 4, Opera 12 et Internet Explorer 9.<br/><br/>
 
 				Si vous rencontrez un problème d'affichage, veuillez nous contacter via la <a href="boite-a-erreur.php" data-link="internal">boite à erreur</a>.<br/>
-				Les navigateurs peu utilisés n'ont pas été testé, si vous rencontrez un problème sur ces navigateurs, envoyez nous un mail sur contact[arobase]hhh-world[point]com, en précisant bien votre logiciel, sa version, et une capture d'écran. Merci :)
+				Les navigateurs peu utilisés n'ont pas été testé, si vous rencontrez un problème sur ces navigateurs, envoyez nous un mail sur contact[arobase]anesis[point]tk, en précisant bien votre logiciel, sa version, et une capture d'écran. Merci :)
 			</p>
 			</footer>
 		</div><!-- end main-->

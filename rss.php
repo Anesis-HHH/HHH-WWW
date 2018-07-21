@@ -3,6 +3,7 @@ header("Pragma: no-cache");
 header("Content-type: application/rss+xml");
 require 'classes/NewsManager.php';
 // on va se baser sur le systeme d'archive pour faire le RSS
+$urlSite = "https://anesis.tk";
 $archives = new NewsManager();
 $tabArc = $archives->listArchive();
 
@@ -16,40 +17,30 @@ function GenerateUrl ($s) {
   //Remove a - at the beginning or end and make lowercase
   return strtolower (preg_replace ('/^-/', '', preg_replace ('/-$/', '', $s)));
 }
-		echo '<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0"><channel><description>Flux RSS des news de la Hardcore Hentai Headquarter</description><link>http://hhh-world.com</link><title>Hardcore Hentai Headquarter, Hentai français depuis 2004</title>';
-		
-		// on va se limiter au 10 premiere news 
-		for($i=0;$i<10;$i++){
-			
-			
-			// echo print_r($tabArc[$i]['titre']); --> tableau associatif DANS un tableau indexé.
-			$idnews=$tabArc[$i]['id'];
-			$titrenews=$tabArc[$i]['titre'];
-			// on applique le meme systeme de réécriture d'url que dans les archives des news
-			$paramTitre=GenerateUrl($tabArc[$i]['titre']);
-			$datenews=date('D, d M Y H:i:s +0200', $tabArc[$i]['timestamp']);
-			// pour respecter la syntaxe XML, on passe les caractère HTML à la moulinette, et pour un meilleur rendu, on prend en compte les sauts de lignes.
-			$resume =  htmlspecialchars(nl2br($tabArc[$i]['contenu']));
-			$auteur=$tabArc[$i]['pseudo'];
-			echo'
-			<item>
-				<title>'.$titrenews.'</title>
-				<link>http://hhh-world.com/lireNews.php?idnews='.$idnews.'&amp;titre='.$paramTitre.'</link>
-				<description>'.$resume.'</description>
-				<comments>http://hhh-world.com/lireNews.php?idnews='.$idnews.'&amp;titre='.$paramTitre.'</comments>
-				<author>'.$auteur.'</author>
-				<pubDate>'.$datenews.'</pubDate>
-				<guid>'.$titrenews.'</guid>
-				<source>http://hhh-world.com</source>
-			</item>
-			';
-	
-		}
-		
-	echo '</channel></rss>';
-
-
+  echo '<?xml version="1.0" encoding="UTF-8" ?><rss version="2.0"><channel><description>Flux RSS des news de la Hardcore Hentai Headquarter</description><link>'.$urlSite.'</link><title>Hardcore Hentai Headquarter, Hentai français depuis 2004</title>';
+  // on va se limiter au 10 premiere news 
+  for($i=0;$i<10;$i++){
+    // echo print_r($tabArc[$i]['titre']); --> tableau associatif DANS un tableau indexé.
+    $idnews=$tabArc[$i]['id'];
+    $titrenews=$tabArc[$i]['titre'];
+    // on applique le meme systeme de réécriture d'url que dans les archives des news
+    $paramTitre=GenerateUrl($tabArc[$i]['titre']);
+    $datenews=date('D, d M Y H:i:s +0200', $tabArc[$i]['timestamp']);
+    // pour respecter la syntaxe XML, on passe les caractère HTML à la moulinette, et pour un meilleur rendu, on prend en compte les sauts de lignes.
+    $resume =  htmlspecialchars(nl2br($tabArc[$i]['contenu']));
+    $auteur=$tabArc[$i]['pseudo'];
+    echo'
+    <item>
+      <title>'.$titrenews.'</title>
+      <link>'.$urlSite.'/lireNews.php?idnews='.$idnews.'&amp;titre='.$paramTitre.'</link>
+      <description>'.$resume.'</description>
+      <comments>'.$urlSite.'/lireNews.php?idnews='.$idnews.'&amp;titre='.$paramTitre.'</comments>
+      <author>'.$auteur.'</author>
+      <pubDate>'.$datenews.'</pubDate>
+      <guid>'.$titrenews.'</guid>
+      <source>'.$urlSite.'</source>
+    </item>
+    ';
+  }
+echo '</channel></rss>';
 ?>
-
-
-

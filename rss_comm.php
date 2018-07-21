@@ -9,19 +9,19 @@ header("Content-type: application/rss+xml");
       <![CDATA[Flux RSS des commentaires des news de la Hardcore Hentai Headquarter]]
 		</description>
 		<link>
-			http://hhh-world.com
+			http://anesis.tk
 		</link>
 		<title><![CDATA[Hardcore Hentai Headquarter, Hentai français depuis 2004]]</title>
 		<item>
 			<title>BIENTÔT !</title>
 			<link>
-				http://hhh-world.com/
+				http://anesis.tk/
 			</link>
 			<description>
 				<![CDATA[BIENTÔT !!!]]
 			</description>
 			<comments>
-				http://hhh-world.com/
+				http://anesis.tk/
 			</comments>
 			<author>
 				Albirew
