@@ -15,10 +15,11 @@
 |############################################################|
 |############################################################|
 |###########_____SITE V3 - POLE DEVELOPPEMENT_____###########| 
-
 -->
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<meta http-equiv="cache-control" content="no-cache" />
+		<meta http-equiv="pragma" content="no-cache" />
 		<title>Hardcore Hentai Heaquarter V3 - ADMIN</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="favicon.ico">
@@ -26,7 +27,6 @@
 		<link rel="stylesheet" href="design/css.css">
 		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
-		<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>-->
 		<script src="design/js/jquery-1.11.0.js"></script>
 		<script src="design/js/interface.js"></script>
 	</head>	
@@ -59,5 +59,6 @@
 					<a href="comnews.php">Les commentaires de news</a>
 					<a href="comprojet.php">Les commentaires de projets</a>
 				</div>
+				<div class="menu"><a href="log.php">ErrorLog</a></div>
 			</nav>
 		</header>
