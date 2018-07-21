@@ -55,9 +55,13 @@ abstract class Commentaires
 	/**
 	 * Constructeur de la classe
 	 * */
-	 public function Commentaires()
+	 public function __construct()
 	 {
 		 $this->setConnexion();
+	 }
+	 public function Commentaires()
+	 {
+		 self::__construct();
 	 }
 	 /**
 	  * Initialise la connexion à la base de données

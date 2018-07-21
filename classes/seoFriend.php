@@ -23,9 +23,13 @@ class SeoFriend
 	/**
 	 * Constructeur de la classe
 	* */
-	public function SeoFriend()
+	public function __construct()
 	{
 		$this->setDb();
+	}
+	public function SeoFriend()
+	{
+		self::__construct();
 	}
 
   public function titreNews($idLire)

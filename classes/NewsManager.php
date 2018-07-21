@@ -36,9 +36,13 @@ class NewsManager
 	/**
 	 * Constructeur de la classe
 	* */
-	public function NewsManager()
+	public function __construct()
 	{
 		$this->setDb();
+	}
+	public function NewsManager()
+	{
+		self::__construct();
 	}
   /**
    * créer ou met à jour le cache de la page d'index

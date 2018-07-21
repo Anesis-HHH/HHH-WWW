@@ -21,8 +21,8 @@
  * 
  * 
  */
-ini_set('display_errors', '1');
-ini_set('error_reporting', E_ALL);
+ini_set('display_errors', '0');
+error_reporting(E_ALL ^ E_DEPRECATED);
 setlocale(LC_CTYPE, 'fr_FR');
 /**
  * Cette classe gère les projets du site web de la HHH.
@@ -56,9 +56,13 @@ class ProjetManager
 	/**
 	 * Constructeur de la classe
 	* */
-	public function ProjetManager()
+	public function __construct()
 	{
 		$this->setConnexion();
+	}
+	public function ProjetManager()
+	{
+		self::__construct();
 	}
 	/**
     * Initialise la connexion à la bdd
