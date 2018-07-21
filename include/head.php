@@ -43,8 +43,8 @@
     <script src="design/js/jquery.transit.min.js"></script>
     <script src="design/js/interface.js?=20161116"></script>
     <script src="design/js/paper-full.min.js"></script>
-    <noscript>Bienvenue en 2016, veuillez activer JavaScript pour naviguer sur notre site ;)</noscript>
 <?php /*
+    <noscript>Bienvenue en 2014, veuillez activer JavaScript pour naviguer sur notre site ;)</noscript>
     <!-- Load external PaperScript and associate it with myCanvas -->
     <script type="text/paperscript" src="design/js/paperbullehhh.js" canvas="myCanvas"></script>
 */ ?>
@@ -56,7 +56,7 @@
     <div id="disclaimer">
       <div id="logoaccueil"></div>
       <p>
-      <noscript>Bienvenue en 2016, veuillez activer JavaScript pour naviguer sur notre site ;)<br><br></noscript>
+      <noscript>Bienvenue en 2014, veuillez activer JavaScript pour naviguer sur notre site ;)<br><br></noscript>
       Ce site Internet contient des textes, images et vidéos à caractère pornographique qui peuvent choquer certaines sensibilités, par conséquent :<br/><br/>
       - L'accès à ce site est strictement interdit aux mineurs.<br/>
       - Le contenu de ce site ne doit pas être diffusé à des mineurs.<br/>
