@@ -1,4 +1,5 @@
 ﻿<?php 
+header("Pragma: no-cache");
 require dirname(__FILE__).'/../classes/ProjetManager.php';
 include 'include/head.php';
 

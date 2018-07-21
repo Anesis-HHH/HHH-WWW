@@ -1,4 +1,5 @@
 ﻿<?php 
+header("Pragma: no-cache");
 include dirname(__FILE__).'/../include/connexionBdd.php';
 include 'include/head.php';
 $Membre= $bdd->query('SELECT * FROM membre WHERE id!=0 ORDER BY statut,pseudo');

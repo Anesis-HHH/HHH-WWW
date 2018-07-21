@@ -1,4 +1,5 @@
 <?php
+header("Pragma: no-cache");
 include 'include/head.php';
 
 echo '<div id="main"><pre>';
