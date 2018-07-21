@@ -43,11 +43,9 @@
     <script src="design/js/jquery.transit.min.js"></script>
     <script src="design/js/interface.js?=20161116"></script>
     <script src="design/js/paper-full.min.js"></script>
-<?php /*
     <noscript>Bienvenue en 2014, veuillez activer JavaScript pour naviguer sur notre site ;)</noscript>
     <!-- Load external PaperScript and associate it with myCanvas -->
     <script type="text/paperscript" src="design/js/paperbullehhh.js" canvas="myCanvas"></script>
-*/ ?>
     <!--[if lte IE 8]>
     <script src="design/js/html5.js" type="text/javascript"></script>
     <![endif]-->
