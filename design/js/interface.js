@@ -722,7 +722,7 @@ function chatopen(){
 		e.preventDefault();
 		// on vérifie l'existence ou pas de la boite de tchat et on envoit
 		if($("#hhhtchat").length==0){
-			$("h2").before('<div id="hhhtchat" data-chatdeploy="none"><div id="chatheader">HHH Chat<span>&times;</span><span></span></div><span>Bienvenu sur le web-irc de la HHH. Veuillez spécifier votre pseudonyme et validez avec "Connect".</span><iframe src="http://widget.mibbit.com/?settings=3b9920b4c6a7313052939b4016b74d0e&server=irc.worldnet.Net&channel=%23hhh"></iframe><br/><div id="chatnote">Veuillez noter que vous ne pouvez pas télécharger de releases avec cet applet.<br/> Pour cela vous devez vous munir d\'un "vrai" client IRC, celui de la team (Luxuria) est disponible sur le site.</div></div>');
+			$("h2").before('<div id="hhhtchat" data-chatdeploy="none"><div id="chatheader">HHH Chat<span>&times;</span><span></span></div><span>Bienvenu sur le web-irc de la HHH. Veuillez spécifier votre pseudonyme et validez avec "Connect".</span><iframe src="https://widget.mibbit.com/?settings=3b9920b4c6a7313052939b4016b74d0e&server=irc.worldnet.Net&channel=%23hhh"></iframe><br/><div id="chatnote">Veuillez noter que vous ne pouvez pas télécharger de releases avec cet applet.<br/> Pour cela vous devez vous munir d\'un "vrai" client IRC, celui de la team (Luxuria) est disponible sur le site.</div></div>');
 			chatposition();
 			hhhchatcontrol();
 		}
